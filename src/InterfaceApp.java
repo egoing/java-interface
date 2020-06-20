@@ -13,11 +13,14 @@ class RealCal implements Calculable, Printable{
         System.out.println("This is RealCal!!");
     }
 }
+class AdvancedPrint implements Printable{
+    public void print() {
+        System.out.println("This is RealCal!!");
+    }
+}
 public class InterfaceApp {
     public static void main(String[] args) {
-        RealCal c = new RealCal();
-        System.out.println(c.sum(2,1));
+        Printable c = new AdvancedPrint();
         c.print();
-        System.out.println(c.PI);
     }
 }
